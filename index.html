@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Warriors of SMAN BERNAS</title>
-   <style>
+    <style>
+        /* Tambahkan gaya CSS di sini jika diperlukan */
     </style>
 </head>
 <body>
-    <div class="loggin-wrapper">
-        <form action="" class="form">
+    <div class="login-wrapper">
+        <form action="#" class="form" onsubmit="auth(); return false;">
             <h2>Login</h2>
             <div class="input-group">
-                <input type="text" name="LoginUser" id="email" required/>
-                <label for="loginUser">Email address</label>
-                </div>
+                <input type="text" name="loginUser" id="email" required/>
+                <label for="email">Email address</label>
+            </div>
 
-                <div class="input-group">
-                    <input
-                        type="password"
-                        name="LoginPassword"
-                        id="password"
-                        required
-                        />
+            <div class="input-group">
+                <input
+                    type="password"
+                    name="loginPassword"
+                    id="password"
+                    required
+                />
+                <label for="password">Password</label>
+            </div>
+            <input type="submit" value="Login" class="submit-btn"/>
+        </form>
+    </div>
 
-                        <label for="LoginPassword">Password</label>
-                        </div>
-                        <input type="submit" value="Login" class="submit-btn" onclick="auth()"/>
-                        </form>
-                        </div>
-                        <script>
-                            function auth(){
-                                var Email = document.getElementById("email").value;
-                                var password = document.getElementById("password").value;
-                                if(email== "admin@gmail.com" && password=="admin123")
-                                window.location.assign("https://suheri99.github.io/Website-SMAN-BERNAS-2/")
-                                alert("Login Successfully ");
-                            }
-                            else{
-                                alert("Invalid Information ");
-                                return
-                            }
+    <script>
+        function auth() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
 
-                        </script>
-
-                </div>
+            if (email === "admin@gmail.com" && password === "admin123") {
+                window.location.href = "https://suheri99.github.io/Website-SMAN-BERNAS-2/";
+                alert("Login Successfully");
+            } else {
+                alert("Invalid Information");
+            }
+        }
+    </script>
 </body>
+</html>

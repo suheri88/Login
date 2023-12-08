@@ -31,11 +31,53 @@
     </div>
 
     <script>
+        var users = [
+            { email: "yardany2401@gmail.com", password: "admin123" },
+            { email: "rafelanggaradaffa@gmail.com", password: "user123" },
+            { email: "dzeazhafira11@gmail.com", password: "user456" },
+            { email: "nailafitriamelia21@gmail.com", password: "admin123" },
+            { email: "abdulridwanhakim48@gmail.com", password: "user123" },
+            { email: "raflyahmadazwir500@gmail.com", password: "user456" },
+            { email: "ydafafitra1473@gmail.com", password: "admin123" },
+            { email: "ashiilawisha@gmail.com", password: "user123" },
+            { email: "nisya.sabila.msi@gmail.com", password: "user456" },
+            { email: "windiradira8@gmail.com", password: "admin123" },
+            { email: "Aisyahramayana66@gmail.com", password: "user123" },
+            { email: "arricaputrihandayani021@gmail.com", password: "user456" },
+            { email: "sarahsalsabilaa008@gmail.com", password: "admin123" },
+            { email: "ridosani05@gmail.com", password: "user123" },
+            { email: "maylaniasprida@gmail.com", password: "user456" },
+            { email: "auliasakinah433@gmail.com", password: "admin123" },
+            { email: "Rehanatan195@gmail.com", password: "user123" },
+            { email: "syazanamahya@gmail.com", password: "user456" },
+            { email: "annisarohmat024@gmail.com", password: "admin123" },
+            { email: "salsabernass@gmail.com", password: "user123" },
+            { email: "Raufaniabsen17@gmail.com", password: "user456" },
+            { email: "ns8192816@gmail.com", password: "admin123" },
+            { email: "faidah260708@gmail.com", password: "user123" },
+            { email: "akgam135@gmail.com", password: "user456" },
+            { email: "zuriyaharifah@gmail.com", password: "admin123" },
+            { email: "elmael2007@gmail.com", password: "user123" },
+            { email: "Rani84467@gmail.com", password: "user456" },
+            { email: "ciwigamemuac@gmail.com", password: "admin123" },
+            { email: "aja329037@gmail.com", password: "user123" },
+            { email: "faeqhachika2008@gmail.com", password: "user456" },
+            { email: "chintyac40@gmail.com", password: "admin123" },
+            { email: "hanifahzaharani6@gmail.com", password: "user123" },
+            { email: "hafizahhanim26@gmail.com", password: "user456" },
+           
+            // Add more users as needed
+        ];
+
         function auth() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
 
-            if (email === "admin@gmail.com" && password === "admin123") {
+            var user = users.find(function(user) {
+                return user.email === email && user.password === password;
+            });
+
+            if (user) {
                 window.location.href = "https://suheri88.github.io/SMANBERNASBINSUS/";
                 alert("Login Successfully");
             } else {
